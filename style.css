@@ -143,3 +143,24 @@ input[type="checkbox" i] {
     color: #111111;
 }
 
+/* footer */
+
+footer{
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    background-color: #111111;
+    color: #ddddff;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+i{
+    font-size: 1.5rem;
+    color: #ddddff;
+    text-decoration: none;
+    transition: 0.618s;
+}
+
+i:hover{
+    transform: scale(1.2);
+}

@@ -16,3 +16,4 @@ The app is hosted with github-pages. To check it out go to <https://azalurg.gith
 
 - [ ] add cookies to save user setting
 - [ ] add predefined timestamps
+- [ ] add alert when leaving the page
