@@ -143,14 +143,17 @@ input[type="checkbox" i] {
     color: #111111;
 }
 
+.light i {
+    color: #111111;
+}
+
 /* footer */
 
 footer{
     position: fixed;
     bottom: 1rem;
     right: 2rem;
-    background-color: #111111;
-    color: #ddddff;
+    background-color: transparent;
     font-family: 'Anonymous Pro', monospace;
 }
 
