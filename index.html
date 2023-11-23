@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
 
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/6f3103b13c.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="./style.css">
+
 </head>
+
 <body>
     <section>
         <div id="container">
@@ -17,19 +29,20 @@
                     <span>:</span>
                     <span id="timer_time_seconds">00</span>
                 </div>
-                <br/>
+                <br />
                 <div id="timer_buttons">
-                    <button id="timer_buttons_start" onclick="startTimer()">Start</button>
-                    <button id="timer_buttons_stop" onclick="stopTimer()">Stop</button>
-                    <button id="timer_buttons_reset" onclick="resetTimer()">Reset</button>
-                    <button id="timer_buttons_next" onclick="skipTimer()">Skip</button>
+                    <button id="timer_buttons_start" onclick="startTimer(); clickSound();">Start</button>
+                    <button id="timer_buttons_stop" onclick="stopTimer(); clickSound();">Stop</button>
+                    <button id="timer_buttons_reset" onclick="resetTimer(); clickSound();">Reset</button>
+                    <button id="timer_buttons_next" onclick="skipTimer(); clickSound();">Skip</button>
                 </div>
             </div>
         </div>
         <div id="bell">
-            <button id="bell_button" onclick="stopSound()"><spna> </spna></button>
+            <button id="bell_button" onclick="stopSound(); clickSound();"><i class="fa-solid fa-bell"></i></button>
         </div>
     </section>
     <script src="./script.js"></script>
 </body>
+
 </html>

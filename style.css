@@ -1,7 +1,7 @@
 body{
     background-color: #111111;
     color: #ddddff;
-    font-family: "Mononoki Nerd Font", monospace;
+    font-family: 'Anonymous Pro', monospace;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -32,7 +32,7 @@ button{
     border-radius: 0.5rem;
     color: #ddddff;
     cursor: pointer;
-    font-family: Mononoki, monospace;
+    font-family: 'Anonymous Pro', monospace;
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0 1rem;

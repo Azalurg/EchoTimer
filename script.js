@@ -11,8 +11,8 @@ let bell_button = document.getElementById("bell_button");
 
 let work_time = 40;
 let break_time = 10;
-let seconds = 0;
 let long_break_time = 30;
+let seconds = 0;
 
 work = true;
 
@@ -28,7 +28,6 @@ window.onload = () => {
 }
 
 function startTimer() {
-    clickSound();
     start_button.style = "display: none;";
     stop_button.style = "display: inline;";
     interval = setInterval(timer, 1000);
@@ -40,7 +39,6 @@ function startTimer() {
 }
 
 function stopTimer() {
-    clickSound();
     timer_title.innerHTML = "Paused";
     clearInterval(interval);
     start_button.style = "display: inline;";
@@ -48,7 +46,6 @@ function stopTimer() {
 }
 
 function resetTimer() {
-    clickSound();
     clearInterval(interval);
     start_button.style = "display: inline;";
     stop_button.style = "display: none;";
@@ -64,7 +61,6 @@ function resetTimer() {
 }
 
 function skipTimer() {
-    clickSound();
     work = !work;
     resetTimer();
 }
@@ -73,10 +69,10 @@ timer = () => {
     if (seconds == 0) {
         seconds = 59;
         timer_time_seconds.innerHTML = String(seconds).padStart(2, '0');
-        timer_time_minutes.innerHTML = timer_time_minutes.innerHTML - 1;
+        timer_time_minutes.innerHTML = String(timer_time_minutes.innerHTML - 1).padStart(2, '0');
     } else {
         seconds = seconds - 1;
-        timer_time_seconds.innerHTML = seconds;
+        timer_time_seconds.innerHTML = String(seconds).padStart(2, '0');
     }
 
     if (timer_time_minutes.innerHTML == 0 && seconds == 0) {
@@ -108,7 +104,6 @@ function playSound() {
 }
 
 function stopSound() {
-    clickSound();
     audio.pause();
     audio.currentTime = 0;
     bell_button.style = "display: none;";
