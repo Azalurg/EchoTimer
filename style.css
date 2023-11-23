@@ -1,0 +1,43 @@
+body{
+    background-color: #111111;
+    color: #ddddff;
+    font-family: Mononoki, monospace;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer_time{
+    font-size: 12rem;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+}
+
+#timer_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+button{
+    background-color: #ddddff;
+    border: none;
+    border-radius: 0.5rem;
+    color: #111111;
+    cursor: pointer;
+    font-family: Mononoki, monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+}
+
+button:hover{
+    background-color: #eeeeff;
+}
