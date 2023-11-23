@@ -6,6 +6,7 @@ let start_button = document.getElementById("timer_buttons_start");
 let stop_button = document.getElementById("timer_buttons_stop");
 let reset_button = document.getElementById("timer_buttons_reset");
 let skip_button = document.getElementById("timer_buttons_skip");
+let edit_button = document.getElementById("timer_buttons_edit");
 
 let bell_button = document.getElementById("bell_button");
 
@@ -30,6 +31,7 @@ window.onload = () => {
 function startTimer() {
     start_button.style = "display: none;";
     stop_button.style = "display: inline;";
+    edit_button.style = "display: none;";
     interval = setInterval(timer, 1000);
     if (work) {
         timer_title.innerHTML = "Work";
@@ -75,7 +77,7 @@ timer = () => {
         timer_time_seconds.innerHTML = String(seconds).padStart(2, '0');
     }
 
-    if (timer_time_minutes.innerHTML == 0 && seconds == 0) {
+    if ((timer_time_minutes.innerHTML == 0 && seconds == 0) || timer_time_minutes.innerHTML < 0) {
         if (work) {
             timer_time_minutes.innerHTML = break_time;
             timer_time_seconds.innerHTML = String(seconds).padStart(2, '0');
@@ -114,4 +116,21 @@ function clickSound() {
     audio.play();
 }
 
+// Modal
 
+function openEditModal() {
+    document.getElementById("editModal").style.display = "flex";
+    document.getElementById("edit_work_time").value = work_time;
+    document.getElementById("edit_break_time").value = break_time;
+}
+
+function closeEditModal() {
+    document.getElementById("editModal").style.display = "none";
+}
+
+function editTimer() {
+    work_time = document.getElementById("edit_work_time").value;
+    break_time = document.getElementById("edit_break_time").value;
+    resetTimer();
+    closeEditModal();
+}

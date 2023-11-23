@@ -29,17 +29,30 @@
                     <span>:</span>
                     <span id="timer_time_seconds">00</span>
                 </div>
-                <br />
                 <div id="timer_buttons">
                     <button id="timer_buttons_start" onclick="startTimer(); clickSound();">Start</button>
                     <button id="timer_buttons_stop" onclick="stopTimer(); clickSound();">Stop</button>
                     <button id="timer_buttons_reset" onclick="resetTimer(); clickSound();">Reset</button>
                     <button id="timer_buttons_next" onclick="skipTimer(); clickSound();">Skip</button>
                 </div>
+                <div id="timer_buttons">
+                    <button id="timer_buttons_edit" onclick="openEditModal(); clickSound();">Edit</button>
+                </div>
             </div>
         </div>
         <div id="bell">
             <button id="bell_button" onclick="stopSound(); clickSound();"><i class="fa-solid fa-bell"></i></button>
+        </div>
+        <div id="editModal" style="display: none;">
+            <form>
+                <label for="edit_work_time">Work time</label>
+                <input type="number" id="edit_work_time" placeholder="Work time">
+                <label for="edit_break_time">Break time</label>
+                <input type="number" id="edit_break_time" placeholder="Break time">
+                <div style="display: flex; justify-content: center;">
+                    <button type="button" id="editModal_button" onclick="editTimer(); clickSound();">Save</button>
+                </div>
+            </form>
         </div>
     </section>
     <script src="./script.js"></script>
