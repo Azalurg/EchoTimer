@@ -112,3 +112,34 @@ form button{
     margin-top: 2rem;
 }
 
+input[type="checkbox" i] {
+    width: auto;
+}
+
+#label_light_mode{
+    display: inline
+}
+
+/* light mode */
+
+.light{
+    background-color: #ddddff;
+    color: #111111;
+}
+
+.light form{
+    background-color: #ddddff;
+    color: #111111;
+    border: 2px solid #111111;
+}
+
+.light form input{
+    border: 2px solid #111111;
+    color: #111111;
+}
+
+.light button{
+    border: 2px solid #111111;
+    color: #111111;
+}
+

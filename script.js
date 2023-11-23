@@ -10,15 +10,18 @@ let edit_button = document.getElementById("timer_buttons_edit");
 
 let bell_button = document.getElementById("bell_button");
 
+// Variables
+
 let work_time = 40;
 let break_time = 10;
 let long_break_time = 30;
 let seconds = 0;
 
-work = true;
+let work = true;
+let light = false;
 
-interval = null;
-audio = null;
+let interval = null;
+let audio = null;
 
 window.onload = () => {
     timer_time_minutes.innerHTML = work_time;
@@ -122,6 +125,7 @@ function openEditModal() {
     document.getElementById("editModal").style.display = "flex";
     document.getElementById("edit_work_time").value = work_time;
     document.getElementById("edit_break_time").value = break_time;
+    document.getElementById("edit_light_mode").value = light;
 }
 
 function closeEditModal() {
@@ -131,6 +135,13 @@ function closeEditModal() {
 function editTimer() {
     work_time = document.getElementById("edit_work_time").value;
     break_time = document.getElementById("edit_break_time").value;
+    light = document.getElementById("edit_light_mode").checked;
+    if (light) {
+        document.body.classList.add("light");
+    }
+    else {
+        document.body.classList.remove("light");
+    }
     resetTimer();
     closeEditModal();
 }
