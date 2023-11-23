@@ -1,7 +1,7 @@
 body{
     background-color: #111111;
     color: #ddddff;
-    font-family: Mononoki, monospace;
+    font-family: "Mononoki Nerd Font", monospace;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -9,6 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 1.1;
 }
 
 #timer_time{
@@ -26,18 +27,35 @@ body{
 }
 
 button{
-    background-color: #ddddff;
-    border: none;
+    background-color: transparent;
+    border: 2px solid #ddddff;
     border-radius: 0.5rem;
-    color: #111111;
+    color: #ddddff;
     cursor: pointer;
     font-family: Mononoki, monospace;
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0 1rem;
     padding: 0.5rem 1rem;
+    transition: 0.618s;
 }
 
 button:hover{
-    background-color: #eeeeff;
+    transform: scale(1.1);
+}
+
+#bell{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+}
+
+#bell_button{
+    border: none;
+    font-size: 5rem;
+    white-space: pre;
+}
+
+#bell_button:hover{
+    transform: scale(1.2);
 }
