@@ -4,7 +4,7 @@
 
 EchoTimer is a minimalistic and user-friendly productivity and pomodoro timer app designed to help you stay focused, boost productivity, and manage your time effectively. With its simple interface and powerful features, EchoTimer is the perfect companion for anyone seeking a seamless timer experience.
 
-The app is hosted with github-pages. To check it out go to <https://azalurg.github.io/pomodoro/>. If you want to have your own copy just make a fork of this repo and init github-pages for it.
+The app is hosted with github-pages. To check it out go to <https://azalurg.github.io/EchoTimer/>. If you want to have your own copy just make a fork of this repo and init github-pages for it.
 
 ## Sound
 
